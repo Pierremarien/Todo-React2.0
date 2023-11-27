@@ -1,8 +1,27 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# To Do App React
 
-Currently, two official plugins are available:
+- Type of challenge: consolidation, SOLO
+- Repository: react-intro 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project of a To Do app using React this is a learning version where i tried to understand the use of hooks in react i'll restart anew in a second [Repository](https://github.com/Pierremarien/Todo-React2.0) to make a better version.
+
+## Authors
+
+- [@Pierremarien](https://github.com/Pierremarien)
+
+
+
+## Tech Stack
+
+**Client:** JSX, React, SCSS
+
+
+
+## Roadmap
+- all the finishing touch will be made in the second project 
+
+
+## Deployment
+
+The second project will be deployed
