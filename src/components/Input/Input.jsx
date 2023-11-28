@@ -1,10 +1,11 @@
 import React from "react";
 
-const TextBox = React.forwardRef(
-  ({ className, placeholder, value, onChange, style }, ref) => {
+const Input = React.forwardRef(
+  ({ className, type, placeholder, value, onChange, style }, ref) => {
     return (
-      <textarea
+      <input
         className={className}
+        type={type}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
@@ -15,4 +16,4 @@ const TextBox = React.forwardRef(
   }
 );
 
-export default TextBox;
+export default Input;
