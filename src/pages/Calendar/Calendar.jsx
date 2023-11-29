@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
+import 'react-calendar/dist/Calendar.css';
+
+const TodoTile = ({ todo }) => (
+    <div>
+      {todo.title}
+    </div>
+  );
 
 const CalendarPage = () => {
   const [todos, setTodos] = useState([]);
@@ -10,20 +17,19 @@ const CalendarPage = () => {
   }, []);
 
   const renderTodos = (date) => {
-    const todosOnDate = todos.filter((todo) => {
-      const todoDate = new Date(todo.dueDate);
-      return todoDate.toDateString() === date.toDateString();
-    });
+  const todosOnDate = todos.filter((todo) => {
+    const todoDate = new Date(todo.dueDate);
+    return todoDate.toDateString() === date.toDateString();
+  });
 
-    return (
-      <ul>
-        {todosOnDate.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
-        ))}
-      </ul>
-    );
-  };
-
+  return (
+    <div>
+      {todosOnDate.map((todo) => (
+        <TodoTile todo={todo} />
+      ))}
+    </div>
+  ); 
+};
   const handleDateChange = (date) => {};
 
   return (

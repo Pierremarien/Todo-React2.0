@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Form from "../../components/Form/Form";
-import List from "../../components/List/List";
-import Button from "../../components/Buttons/Buttons";
+import Form from "../../components/form/Form"
+import List from "../../components/list/List";
+import Button from "../../components/buttons/Buttons";
 import Checkbox from "../../components/Checkbox/Checkbox";
+import { v4 as uuidv4 } from 'uuid'; 
 
 const ToDo = () => {
   const [todos, setTodos] = useState([]);
@@ -13,7 +14,8 @@ const ToDo = () => {
   }, []);
 
   const handleSaveTodo = (newTodo) => {
-    const updatedTodos = [...todos, newTodo];
+    const todoWithId = { ...newTodo, id: uuidv4() }; 
+    const updatedTodos = [...todos, todoWithId];
     setTodos(updatedTodos);
     localStorage.setItem("todos", JSON.stringify(updatedTodos));
   };
@@ -38,7 +40,6 @@ const ToDo = () => {
       <Button onClick={() => handleEditTodo(todo)}>Edit</Button>
     </React.Fragment>
   );
-
   return (
     <div>
       <h1>ToDo Page</h1>
