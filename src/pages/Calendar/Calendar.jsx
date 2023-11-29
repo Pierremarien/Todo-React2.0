@@ -3,10 +3,10 @@ import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 
 const TodoTile = ({ todo }) => (
-    <div>
-      {todo.title}
-    </div>
-  );
+  <div>
+    {todo.title}
+  </div>
+);
 
 const CalendarPage = () => {
   const [todos, setTodos] = useState([]);
@@ -17,19 +17,20 @@ const CalendarPage = () => {
   }, []);
 
   const renderTodos = (date) => {
-  const todosOnDate = todos.filter((todo) => {
-    const todoDate = new Date(todo.dueDate);
-    return todoDate.toDateString() === date.toDateString();
-  });
+    const todosOnDate = todos.filter((todo) => {
+      const todoDate = new Date(todo.dueDate);
+      return todoDate.toDateString() === date.toDateString();
+    });
 
-  return (
-    <div>
-      {todosOnDate.map((todo) => (
-        <TodoTile todo={todo} />
-      ))}
-    </div>
-  ); 
-};
+    return (
+      <div>
+        {todosOnDate.map((todo) => (
+          <TodoTile key={todo.id} todo={todo} />
+        ))}
+      </div>
+    );
+  };
+
   const handleDateChange = (date) => {};
 
   return (
@@ -43,4 +44,4 @@ const CalendarPage = () => {
   );
 };
 
-export default CalendarPage;
+export default CalendarPage;  
