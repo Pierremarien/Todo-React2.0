@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import Root from "./routes/root";
 import ErrorPage from "./pages/error/Error-page";
-import ToDo from "./pages/ToDo/ToDo";
+import ToDo from "./pages/toDo/ToDo";
 import CalendarPage from "./pages/calendar/Calendar";
 import "./styles/main.scss";
 
